@@ -1,0 +1,22 @@
+{
+  "id": "/Coding/index.html",
+  "name": "Know God Better",
+  "short_name": "Know God",
+  "start_url": "/Coding/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/Coding/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Coding/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

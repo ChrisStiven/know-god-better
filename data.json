@@ -1,0 +1,686 @@
+{
+  "attributes": [
+    {
+      "id": "beauty",
+      "name": "Beauty",
+      "color": "#d41a17",
+      "aliases": ["Beautiful"],
+
+      "loveLabel": "The revelation of love",
+      "loveSummary": "Love delighted in and delighting",
+
+      "definition": "God’s beauty is the radiant attractiveness of His being, arising from the perfect harmony of all His attributes. It is the splendour of ●Truth, ●Goodness, ●Holiness, ●Joy and ●Love held together without tension or flaw. Because God is ●Unique and ●Eternal, His beauty neither fades nor competes with any other. It is an objective reality grounded in who God eternally is.",
+
+      "whatThatMeans": "Our Father God is not physically visible to us, but we know that everything about His being is so right and good, and so perfectly balanced and integrated, that when He does reveal something of Himself and we catch a glimpse of Him as He is, He is irresistibly attractive to us who are created in His image.",
+
+      "whatItDoesNotMean": [
+        "God is not cold or impersonal",
+        "He is not merely aesthetically pleasing",
+        "His beauty is not only in the eye of the beholder",
+        "It does not come at the expense of truth or holiness"
+      ],
+
+      "scripture": [
+        "Psalm 27:4",
+        "Psalm 96:6",
+        "Isaiah 33:17",
+        "2 Corinthians 4:6"
+      ]
+    },
+    {
+      "id": "creativity",
+      "name": "Creativity",
+      "color": "#d43f17",
+      "aliases": ["Creative"],
+
+      "loveLabel": "The inventiveness of love",
+      "loveSummary": "Love delighting in bringing forth life and meaning",
+
+      "definition": "God’s creativity is the free and joyful expression of His being, by which He brings into existence life and meaning that did not previously exist. It flows from His ●Freedom, ●Wisdom and ●Joy, and is marked by ●Goodness and ●Extravagance. God creates not from need, but from fullness, and His creativity gives rise to the life we see around us, and the promised eternal life.",
+
+      "whatThatMeans": "Our Father God has at the heart of His being a uniquely creative energy activated by the mere expression of His will. By it He spoke the universe into existence out of nothing, by it He raised Jesus bodily from the dead, by it He gives new life to sinful human beings as they repent and put their trust in Christ and by it He will speak into existence a new and recreated universe.",
+
+      "whatItDoesNotMean": [
+        "God’s creativity does not arise from restlessness or lack",
+        "God is not experimental or uncertain, as though creation were a trial run",
+        "God is not dependent on creation to complete Himself",
+        "God’s creativity is not chaotic or whimsical, but ordered and wise"
+      ],
+
+      "scripture": [
+        "Genesis 1:1",
+        "Psalm 104:30",
+        "Isaiah 65:17",
+        "Ephesians 2:10",
+        "Revelation 21:1"
+      ]
+    },
+    {
+      "id": "eternity",
+      "name": "Eternity",
+      "color": "#d46417",
+      "aliases": ["Eternal"],
+
+      "loveLabel": "The permanence of love",
+      "loveSummary": "Love that never begins, never fades, and never needs to be renewed",
+
+      "definition": "God’s eternity is His existence without beginning, end, or succession, and is the root of His ●Faithfulness and ●Patience. Because God is ●Life in Himself, He does not change, decay, or develop over time. His ●Knowledge, ●Presence and ●Power are eternally complete, and His being transcends all temporal limitation.",
+
+      "whatThatMeans": "Our Father God, the Ultimate Reality, has no beginning and will have no end. He is not constrained by the passage of time, never changes in His being and is not subject to entropy.",
+
+      "whatItDoesNotMean": [
+        "There is no such time as “before God”",
+        "God does not grow, mature, or improve",
+        "God does not forget, wear out, or revise Himself",
+        "Eternity is not endless time, but timeless fullness"
+      ],
+
+      "scripture": [
+        "Deuteronomy 33:27",
+        "Psalm 102:25",
+        "Isaiah 26:4",
+        "1 Timothy 1:17"
+      ]
+    },
+    {
+      "id": "extravagance",
+      "name": "Extravagance",
+      "color": "#d48917",
+      "aliases": ["Extravagant"],
+
+      "loveLabel": "The generosity of love",
+      "loveSummary": "Love that gives without measuring or holding back",
+
+      "definition": "God’s extravagance is the abundant generosity with which He gives of Himself and His gifts. Flowing from His ●Goodness, ●Grace, ●Life and ●Joy, it reflects the fullness of His being rather than restraint. God’s giving is never minimal or cautious, but freely and joyfully exceeds necessity.",
+
+      "whatThatMeans": "Our Father God is fully committed to His purpose in every interaction with His creation. In all He does and all He gives there is no half-measure, holding back or rationing. In His sovereignty and love He acts freely, whole-heartedly and generously.",
+
+      "whatItDoesNotMean": [
+        "God never gives by measured minimum",
+        "God does not give reluctantly or under pressure",
+        "Extravagance is not wastefulness or excess without purpose",
+        "God’s generosity never compromises His wisdom"
+      ],
+
+      "scripture": [
+        "Psalm 65:11",
+        "Malachi 3:10",
+        "1 Corinthians 2:9",
+        "Ephesians 3:16-20"      
+      ]
+    },
+    {
+      "id": "faithfulness",
+      "name": "Faithfulness",
+      "color": "#d4ad17",
+      "aliases": ["Faithful"],
+
+      "loveLabel": "The reliability of love",
+      "loveSummary": "Love that can be trusted absolutely",
+
+      "definition": "God’s faithfulness is His unwavering consistency with His own being and promises. Rooted in His ●Truth, ●Goodness and ●Eternity, it ensures that what God has said and purposed will certainly come to pass. His faithfulness undergirds ●Mercy, ●Forgiveness and hope itself.",
+
+      "whatThatMeans": "Our Father God is 100% reliable. He always acts in accordance with His unchanging being, never makes a mistake and is always true to His promises and His warnings.",
+
+      "whatItDoesNotMean": [
+        "God is not capricious or arbitrary",
+        "God does not change His mind through ignorance or error",
+        "God is not faithful only when it is convenient",
+        "Faithfulness does not exclude discipline or judgment"
+      ],
+
+      "scripture": [
+        "Numbers 23:19",
+        "Deuteronomy 7:9",
+        "Psalm 33:4",
+        "2 Timothy 2:13"
+      ]
+    },
+    {
+      "id": "forgiveness",
+      "name": "Forgiveness",
+      "color": "#b6d417",
+      "aliases": ["Forgiving","Forgiven"],
+
+      "loveLabel": "The perseverance of love",
+      "loveSummary": "Love that refuses to abandon the work of restoration",
+
+      "definition": "God’s forgiveness is His gracious removal of guilt and restoration of relationship, made possible without compromising ●Holiness or ●Justice. Flowing from ●Love and ●Mercy and undergirded by ●Faithfulness, it is effective rather than merely permissive, bringing real reconciliation and transformation.",
+
+      "whatThatMeans": "Our Father God is love and desires us to be in a right relationship with Him, but He is also holy, and our sinful nature needs to be changed in order to make this possible. He freely extends forgiveness to everyone who puts their trust in Christ and accepts the offer of transformation by His Holy Spirit.",
+
+      "whatItDoesNotMean": [
+        "God’s forgiveness is never compromised by vindictiveness or revenge",
+        "God does not pretend sin does not matter",
+        "Forgiveness is not moral amnesia",
+        "Restoration does not occur without truth and repentance"
+      ],
+
+      "scripture": [
+        "Numbers 14:18",
+        "Psalm 103:12",
+        "Acts 10:43",
+        "Ephesians 1:7"
+      ]
+    },
+    {
+      "id": "freedom",
+      "name": "Freedom",
+      "color": "#8fd417",
+      "aliases": ["Free"],
+
+      "loveLabel": "The sufficiency of love",
+      "loveSummary": "Love that is never compelled or constrained",
+
+      "definition": "God’s freedom is His complete independence from all external necessity or constraint. Because of His ●Transcendence and ●Life, God is not bound by the created order. His actions arise freely in ●Joy and ●Creativity from His ●Wisdom, ●Love and ●Sovereignty, never from compulsion or lack.",
+
+      "whatThatMeans": "Our triune Father God, the ultimate reality, is completely self-sufficient, with no needs and no obligations. He is not under the control of anything or anyone and indeed He does not need to exercise self-control, for He is who He is, and everything He says and does is a free and faithful expression of His being.",
+
+      "whatItDoesNotMean": [
+        "God is not a blind, impersonal force",
+        "God does not act arbitrarily or irrationally",
+        "Freedom does not mean unpredictability",
+        "God’s freedom never contradicts His character"
+      ],
+
+      "scripture": [
+        "Exodus 3:14",
+        "Psalm 115:3",
+        "John 3:8",
+        "Acts 17:24-25"
+      ]
+    },
+    {
+      "id": "goodness",
+      "name": "Goodness",
+      "color": "#68d417",
+      "aliases": ["Good"],
+
+      "loveLabel": "The practice of love",
+      "loveSummary": "Love consistently expressed in what is right and life-giving",
+
+      "definition": "God’s goodness is the ●Beauty, ●Joy, moral perfection and beneficence of His being. All that God is and does expresses what is truly good, in ●Faithfulness to His own nature. His ●Justice, ●Mercy and ●Love are never in conflict, but together reveal the fullness of divine goodness.",
+
+      "whatThatMeans": "Our Father God, the ultimate reality, is good. His attributes are perfect individually and perfectly integrated to constitute the ultimate in goodness, both morally and qualitatively. His own goodness constitutes the sole criterion for objective morality.",
+
+      "whatItDoesNotMean": [
+        "God does not regard good and evil as illusory",
+        "Goodness is not mere kindness or softness",
+        "God’s goodness does not exclude discipline",
+        "What God calls good is not subject to cultural revision"
+      ],
+
+      "scripture": [
+        "Deuteronomy 32:4",
+        "2 Samuel 22:31",
+        "Psalm 119:68",
+        "Matthew 5:48"
+      ]
+    },
+    {
+      "id": "grace",
+      "name": "Grace",
+      "color": "#41d417",
+      "aliases": ["Gracious"],
+
+      "loveLabel": "The initiative of love",
+      "loveSummary": "Love that gives before it is asked and beyond what is deserved",
+
+      "definition": "God’s grace is His free and undeserved favour toward His creatures. Flowing from His ●Extravagance, ●Freedom and ●Love, it takes the initiative in blessing, restoring and giving ●Life. Grace does not negate ●Holiness or ●Truth, but fulfils them.",
+
+      "whatThatMeans": "Our Father God is extravagantly loving and freely takes the initiative in blessing us undeservedly and immeasurably beyond anything we could ask for or even imagine.",
+
+      "whatItDoesNotMean": [
+        "God’s grace is not a reward for moral adequacy",
+        "Grace is not indulgence or moral indifference",
+        "Grace does not eliminate the need for repentance",
+        "God’s grace never undermines His holiness"
+      ],
+
+      "scripture": [
+        "Psalm 84:11",
+        "John 1:16-17",
+        "2 Corinthians 8:9",
+        "Ephesians 2:8"
+      ]
+    },
+    {
+      "id": "holiness",
+      "name": "Holiness",
+      "color": "#17d41f",
+      "aliases": ["Holy"],
+
+      "loveLabel": "The purity of love",
+      "loveSummary": "Love wholly set apart from evil and corruption",
+
+      "definition": "God’s holiness is the absolute purity and moral perfection of His being. Because God is ●Transcendent, ●Unique and ●Faithful, and despite His ●Omnipresence, He is utterly other than all impurity and evil. His holiness gives shape to His ●Creativity, ●Love, ●Justice, ●Mercy and ●Forgiveness, and defines the moral order of reality.",
+
+      "whatThatMeans": "Our Father God is morally perfect and pure in Himself. Although He is omnipresent in the universe, its impurities, imperfections and immoralities are utterly foreign to Him and cannot coexist with Him in His being.",
+
+      "whatItDoesNotMean": [
+        "God does not tolerate evil indefinitely",
+        "Holiness is not fragility or withdrawal",
+        "God’s holiness is not opposed to mercy",
+        "Holiness does not imply coldness or distance"
+      ],
+
+      "scripture": [
+        "Leviticus 11:44",
+        "Isaiah 6:3",
+        "Hebrews 7:26",
+        "Revelation 15:4"
+      ]
+    },
+    {
+      "id": "joy",
+      "name": "Joy",
+      "color": "#17d447",
+      "aliases": ["Joyous"],
+
+      "loveLabel": "The celebration of love",
+      "loveSummary": "Love delighting in being, giving, and accomplishing good",
+
+      "definition": "God’s joy is the eternal delight He has in His own being and purposes. It arises from His ●Beauty, ●Creativity and ●Extravagance, and is grounded in the perfect harmony of His attributes. Divine joy is not reactive, but original and life-giving.",
+
+      "whatThatMeans": "Our Father God is not subject to mood swings arising from changing circumstances but is eternally suffused with the joy of being Who He is. His joy is not derivative but original, arising out of nothing other than His own being, and it is the well-spring of all true creaturely joys.",
+
+      "whatItDoesNotMean": [
+        "God is not impassive or emotionless",
+        "Joy is not superficial cheerfulness",
+        "God’s joy does not deny suffering",
+        "Divine joy is never frivolous or naïve"
+      ],
+
+      "scripture": [
+        "1 Chronicles 16:27",
+        "Proverbs 8:30-31",
+        "Nehemiah 8:10",
+        "Hebrews 12:22"
+      ]
+    },
+    {
+      "id": "justice",
+      "name": "Justice",
+      "color": "#17d46f",
+      "aliases": ["Just"],
+
+      "loveLabel": "The protection of love",
+      "loveSummary": "Love that upholds what is right and resists what destroys",
+
+      "definition": "God’s justice is His unwavering commitment to what is right and true. Grounded in ●Truth, ●Wisdom and ●Omniscience, it ensures that evil is opposed and good upheld. God’s justice is never opposed to ●Forgiveness, ●Mercy or ●Grace, but is their necessary context.",
+
+      "whatThatMeans": "Our Father God is 100% consistent in His judgments. He always upholds the truth and condemns the lie, and so He is adamantly opposed to all self-exaltation, oppression, betrayal, theft, deception and idolatry. In the end He will put right everything that is wrong.",
+
+      "whatItDoesNotMean": [
+        "God’s justice is never biased, partial, or self-serving", 
+        "Divine joy is never frivolous or naïve",
+        "God’s justice is never arbitrary",
+        "Justice does not exclude mercy"
+      ],
+
+      "scripture": [
+        "Deuteronomy 32:4",
+        "Isaiah 42:1-3",
+        "Acts 17:31",
+        "Romans 3:25-26"
+      ]
+    },
+    {
+      "id": "life",
+      "name": "Life",
+      "color": "#17d497",
+      "aliases": ["Life-giving"],
+
+      "loveLabel": "The breath of love",
+      "loveSummary": "Love that gives being, vitality, and renewal",
+
+      "definition": "God’s life is His self-existent, uncreated being from which all other life flows. Because God is ●Eternal, ●Creative and ●Extravagant, life exists and is sustained only in relation to Him. All vitality, renewal and resurrection find their source in God.",
+
+      "whatThatMeans": "Our Father God, the ultimate reality, is pure Being. He is who He is, He alone has life in Himself, and from Him all life derives. He freely gives life, literally or figuratively, to everyone and everything He is in relationship with.",
+
+      "whatItDoesNotMean": [
+        "Life does not exist independently of God",
+        "Life is not self-originating",
+        "God’s life is not fragile or exhaustible",
+        "Created life is not independent of its source"
+      ],
+
+      "scripture": [
+        "Exodus 3:14",
+        "Job 12:10",
+        "John 6:63",
+        "John 11:25"
+      ]
+    },
+    {
+      "id": "love",
+      "name": "Love",
+      "color": "#17b6d4",
+      "aliases": ["Loving"],
+
+      "loveLabel": "The heart of God",
+      "loveSummary": "Love that eternally gives itself without loss",
+
+      "definition": "God’s love is the self-giving orientation of His entire being toward the good of others. Expressed through ●Grace, ●Mercy, ●Faithfulness, ●Forgiveness and ●Power, it is purposeful, seeking the best possible outcome for His creation in ●Beauty, ●Holiness and ●Wisdom.",
+
+      "whatThatMeans": "Our Father God, the ultimate reality, is love. In His unique triune being He is intrinsically other-oriented and self-giving, pouring Himself out eternally without being diminished. He desires, purposes and at great cost ultimately brings about for His whole creation the best possible eternal outcome that is consistent with His omniscience and wisdom.",
+
+      "whatItDoesNotMean": [
+        "God’s love is not restricted to the morally deserving",
+        "Love is not mere sentiment",
+        "God’s love does not contradict His holiness",
+        "Love is not permissiveness"
+      ],
+
+      "scripture": [
+        "Exodus 34:6",
+        "Psalm 136:2",
+        "John 3:16",
+        "Romans 5:8",
+        "1 John 3:1"
+      ]
+    },
+    {
+      "id": "mercy",
+      "name": "Mercy",
+      "color": "#178fd4",
+      "aliases": ["Merciful"],
+
+      "loveLabel": "The tenderness of love",
+      "loveSummary": "Love that bends toward weakness and misery",
+
+      "definition": "God’s mercy is His compassionate response to human weakness and misery. Rooted in ●Love, ●Faithfulness and ●Patience, it tempers ●Justice without denying it. Mercy delays judgment and opens the way for ●Forgiveness and restoration.",
+
+      "whatThatMeans": "Our Father God understands our weakness and makes every allowance for it. He has compassion on us in our self-inflicted misery, delays judgment and, when we repent and seek His forgiveness, refrains from bringing on us the full consequences of our own sinful decisions and actions.",
+
+      "whatItDoesNotMean": [
+        "God’s mercy is not constrained by a desire to punish",
+        "Mercy is not indulgence",
+        "Mercy does not deny responsibility",
+        "Compassion does not cancel truth"
+      ],
+
+      "scripture": [
+        "Deuteronomy 4:31",
+        "Psalm 25:6",
+        "Luke 6:36",
+        "Titus 3:5"
+      ]
+    },
+    {
+      "id": "omnipotence",
+      "name": "Omnipotence",
+      "color": "#1768d4",
+      "aliases": ["Omnipotent","Power"],
+
+      "loveLabel": "The power of love",
+      "loveSummary": "Love fully able to accomplish its purposes",
+
+      "definition": "God’s omnipotence is His complete ability to accomplish all that accords with His will and nature. Exercised through ●Sovereignty ●Omnipresence and ●Omniscience in harmony with ●Wisdom, ●Goodness and ●Extravagance, God’s power brings about His purposes without coercion or contradiction.",
+
+      "whatThatMeans": "Our Father God is fully able to accomplish anything and everything that is logically capable of being accomplished. Nothing is too great, too small, too complex or too indirect for Him to achieve if He so chooses.",
+
+      "whatItDoesNotMean": [
+        "God’s power is never limited by created constraints",
+        "God cannot do what is logically incoherent",
+        "Power is not the same as coercion",
+        "God’s power never contradicts His character"
+      ],
+
+      "scripture": [
+        "Job 42:2",
+        "Jeremiah 32:17",
+        "Jeremiah 32:27",
+        "Matthew 19:26"
+      ]
+    },
+    {
+      "id": "omnipresence",
+      "name": "Omnipresence",
+      "color": "#1741d4",
+      "aliases": ["Omnipresent","Presence"],
+
+      "loveLabel": "The nearness of love",
+      "loveSummary": "Love fully present and attentive everywhere",
+
+      "definition": "God’s omnipresence is His full and active presence throughout all reality. Because of His ●Eternity, ●Transcendence and ●Life, God is present without being spatially extended or divided. His presence upholds ●Holiness and ensures the reach of His ●Sovereignty.",
+
+      "whatThatMeans": "Our Father God fills all reality. Without needing to be physically extended in space He is, by His Spirit, fully present, focused and aware in every part of the universe, and is intimately involved with everything that goes on in it.",
+
+      "whatItDoesNotMean": [
+        "There is no place in the universe where God is not",
+        "God is not spread thin",
+        "Omnipresence does not mean absorption into the world",
+        "Nearness does not cancel otherness"
+      ],
+
+      "scripture": [
+        "Psalm 139:7-10",
+        "Jeremiah 23:23-24",
+        "Matthew 18:20",
+        "Romans 8:8-9"
+      ]
+    },
+    {
+      "id": "omniscience",
+      "name": "Omniscience",
+      "color": "#1f17d4",
+      "aliases": ["Knowledge", "Omniscient"],
+
+      "loveLabel": "The mind of love",
+      "loveSummary": "Love that knows fully and truly",
+
+      "definition": "God’s omniscience is His complete and immediate knowledge of all that is or could be. In His ●Transcendence, ●Omnipresence and ●Eternity, God knows all things actual and possible without discovery or uncertainty. His knowledge governs His ●Justice, ●Wisdom and ●Truth.",
+
+      "whatThatMeans": "Our Father God knows, not through logical deduction or sensory perception, but in His own permanent consciousness, the full truth about Himself and everything else that is logically capable of being known, past, present and future, indicative and conditional, whether or not it is ever actualised as a reality.",
+
+      "whatItDoesNotMean": [
+        "Nothing escapes God’s knowledge or awareness",
+        "God does not learn or revise His knowledge",
+        "Omniscience is not surveillance",
+        "God’s knowledge does not eliminate human responsibility"
+      ],
+
+      "scripture": [
+        "1 Kings 8:39",
+        "Psalm 139:1-4",
+        "Psalm 145:5",
+        "Matthew 24:36",
+        "Romans 11:33"
+      ]
+    },
+    {
+      "id": "patience",
+      "name": "Patience",
+      "color": "#4717d4",
+      "aliases": ["Patient"],
+
+      "loveLabel": "The endurance of love",
+      "loveSummary": "Love that is unhurried and steadfast",
+
+      "definition": "God’s patience is His enduring restraint in the outworking of His purposes. Flowing from ●Eternity, ●Wisdom and ●Mercy, it reflects His confidence in the fulfilment of His will. God’s patience is purposeful, not passive.",
+
+      "whatThatMeans": "Our Father God has no doubts about the end result of His purpose to bring His whole creation together under the headship of Christ. He is at peace about the future, unconstrained by time or space and full of mercy. So He is in no hurry to act, and His timing is perfect.",
+
+      "whatItDoesNotMean": [
+        "God is never reactive or impulsive",
+        "Patience is not weakness or delay through uncertainty",
+        "God’s patience has a moral purpose",
+        "Restraint does not mean inaction"
+      ],
+
+      "scripture": [
+        "Exodus 34:6",
+        "Numbers 14:18",
+        "Romans 2:4",
+        "1 Timothy 1:16",
+        "2 Peter 3:9"
+      ]
+    },
+    {
+      "id": "peace",
+      "name": "Peace",
+      "color": "#6f17d4",
+      "aliases": ["Peace-filled"],
+
+      "loveLabel": "The rest of love",
+      "loveSummary": "Love completely at ease in its purposes",
+
+      "definition": "God’s peace is the perfect rest and coherence of His being. Rooted in ●Omniscience, ●Joy, ●Omnipotence, ●Wisdom and ●Sovereignty, it reflects His complete security and confidence. Divine peace flows outward as reconciliation and wholeness.",
+
+      "whatThatMeans": "Our Father God is secure in His omniscience, joy, and sovereignty. He has no regrets about the past and no anxiety about the future. He is never in doubt as to His objectives, how to set about achieving them or whether His plans will succeed.",
+
+      "whatItDoesNotMean": [
+        "God’s peace is never disturbed by uncertainty",
+        "Peace is not passivity",
+        "God’s peace does not deny conflict",
+        "Rest does not mean disengagement"
+      ],
+
+      "scripture": [
+        "Numbers 6:26",
+        "Psalm 2:1-4",
+        "Romans 15:33",
+        "Philippians 4:7",
+        "2 Thessalonians 3:16"
+      ]
+    },
+    {
+      "id": "sovereignty",
+      "name": "Sovereignty",
+      "color": "#9717d4",
+      "aliases": ["Sovereign"],
+
+      "loveLabel": "The rule of love",
+      "loveSummary": "Love exercising rightful authority toward its good ends",
+
+      "definition": "God’s sovereignty is His supreme authority over all creation. Exercised in perfect ●Peace and ●Freedom through ●Wisdom, ●Power and ●Omnipresence, it ensures that His purposes are fulfilled without negating human responsibility.",
+
+      "whatThatMeans": "Our Father God is fully in control of His creation, and everything that goes on in it is subject to His will. He sees to it that His purposes are carried out, without however compromising human responsibility or free will.",
+
+      "whatItDoesNotMean": [
+        "Nothing lies outside God’s sovereign oversight",
+        "Sovereignty is not fatalism",
+        "God’s rule is not tyranny",
+        "Divine control does not eliminate responsibility"
+      ],
+
+      "scripture": [
+        "Genesis 45:7-8",
+        "2 Samuel 7:22, 28",
+        "Proverbs 16:9",
+        "Isaiah 46:11",
+        "Acts 4:28"
+      ]
+    },
+    {
+      "id": "transcendence",
+      "name": "Transcendence",
+      "color": "#9717d4",
+      "aliases": ["Transcendent"],
+
+      "loveLabel": "The Godness of love",
+      "loveSummary": "Love wholly beyond creation, yet freely engaged with it",
+
+      "definition": "God’s transcendence is His existence beyond and above the created order. Because He is ●Unique and ●Eternal, God is not contained by space, time, or matter. His transcendence grounds His ●Freedom, ●Knowledge and ●Holiness.",
+
+      "whatThatMeans": "Our Father God is omnipresent in the universe, but He is not part of it nor contained by it, nor is it part of Him. He exists as the eternal Creator Spirit, wholly separate and uniquely “other”, and His perspective extends infinitely beyond what He has created.",
+
+      "whatItDoesNotMean": [
+        "God is not bounded by the universe",
+        "Transcendence does not imply distance or indifference",
+        "God is not an impersonal abstraction",
+        "Otherness does not cancel nearness"
+      ],
+
+      "scripture": [
+        "Psalm 90:2",
+        "Isaiah 55:8-9",
+        "John 4:24",
+        "Revelation 4:11"
+      ]
+    },
+    {
+      "id": "truth",
+      "name": "Truth",
+      "color": "#d417ad",
+      "aliases": ["True"],
+
+      "loveLabel": "The reality of love",
+      "loveSummary": "Love perfectly aligned with what is",
+
+      "definition": "God’s truth is the ●Beautiful correspondence of His being, words and actions with ultimate reality. Because God is ●Faithful and ●Omniscient, what He reveals is reliable and final. Truth is not external to God; it is grounded in who He is.",
+
+      "whatThatMeans": "Our Father God is the ultimate reality, and by definition whatever corresponds to ultimate reality is truth. Now, our Father God is Who He is, and everything He says and does is a free and faithful expression of His being and therefore corresponds to ultimate reality and is true.",
+
+      "whatItDoesNotMean": [
+        "God does not see reality as relative",
+       " Truth is not a social construct",
+       " God does not deceive or mislead",
+       " Truth is not negotiable"
+      ],
+
+      "scripture": [
+        "Isaiah 45:19",
+        "Isaiah 65:16",
+        "John 1:17",
+        "John 14:16",
+        "John 18:37"
+      ]
+    },
+    {
+      "id": "uniqueness",
+      "name": "Uniqueness",
+      "color": "#d41789",
+      "aliases": ["Unique","Uniquely"],
+
+      "loveLabel": "The incomparability of love",
+      "loveSummary": "Love without rival or equal",
+
+      "definition": "God’s uniqueness is His absolute singularity as the one uncreated, triune God. Because He alone is ●Life in Himself, ●Eternal, ●Omniscient, ●Transcendent and perfect in in ●Goodness and ●Beauty, He has no equal or rival. All being depends on Him, and none compares with Him.",
+
+      "whatThatMeans": "Our Father God, the ultimate reality, is revealed to us in Scripture as triune Deity, uniquely three in one. He is the one and only uncreated Being, Who created and sustains everything else, whether or not it is part of the universe we know. He has no rival.",
+
+      "whatItDoesNotMean": [
+        "God has no rival and no equal",
+        "Uniqueness does not mean isolation",
+        "God is not one being among many",
+        "Divine singularity does not limit relationship"
+      ],
+
+      "scripture": [
+        "Deuteronomy 4:39",
+        "Isaiah 45:5-6",
+        "Mark 12:32",
+        "Acts 4:12"
+      ]
+    },
+    {
+      "id": "wisdom",
+      "name": "Wisdom",
+      "color": "#d4171e",
+      "aliases": ["Wise"],
+
+      "loveLabel": "The understanding of love",
+      "loveSummary": "Love knowing what is best and how to bring it about",
+
+      "definition": "God’s wisdom is His perfect understanding of how best to achieve His purposes. Grounded in ●Omniscience, ●Love and ●Power, and exercised in ●Creativity and ●Patience, it ensures that God’s actions incur no unintended consequences. Divine wisdom harmonises all His attributes.",
+
+      "whatThatMeans": "Our Father God knows what constitutes the best possible eternal outcome for His creation, and for each individual creature, and how to bring it about without compromising either His own holiness and justice or human responsibility and free will, and without incurring unintended consequences.",
+
+      "whatItDoesNotMean": [
+        "God never incurs unintended consequences",
+        "Wisdom is not mere intelligence",
+        "God does not improvise blindly",
+        "Divine wisdom never contradicts divine love"
+      ],
+
+      "scripture": [
+        "Job 12:13",
+        "Psalm 104:24",
+        "Romans 11:33-34",
+        "1 Corinthians 1:21-25"
+      ]
+    }
+  ]
+}
