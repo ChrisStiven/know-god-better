@@ -357,7 +357,7 @@ function showLaunch() {
   title.textContent = "Know God Better";
   backButton.hidden = true;
   document.getElementById("icon-bar").style.display = "none";
-
+  topNav.innerHTML = "";
   app.innerHTML = `
       
   <div class="launch-container">
@@ -396,10 +396,7 @@ function showLaunch() {
     <span class="launch-bar-icon">${iconAbout()}</span>
     <span class="launch-bar-label">About</span>
   </button>
-  </div>
-
-<div
-  
+  </div>  
   `;
 }
 
@@ -408,7 +405,7 @@ function showLaunch() {
 
 function showHome() {
   app.className = "";
-  title.textContent = "Know God Better - God's Attributes: His Glory";
+  title.textContent = "Attributes";
 
   backButton.hidden = false;
   backButton.onclick = showLaunch;
@@ -417,8 +414,11 @@ function showHome() {
   topNav.innerHTML = renderTopNav('home');
 
   app.innerHTML = `
+
+  
     <p class="page-instruction">
       <em>
+        God's Attributes: His Glory. 
         Tap one of the coloured attributes below to explore its meaning and implications.
         Then use the back arrow at the top to return to this page.
       </em>
@@ -482,11 +482,11 @@ function showAttribute(id) {
 
 function showRandomMusings() {
   app.className = "";
-  title.textContent = "Know God Better - Random Musings";
+  title.textContent = "Random Musings";
   backButton.hidden = false;
   backButton.onclick = showHome;
   document.getElementById("icon-bar").style.display = "flex";
-  topNav.innerHTML = renderTopNav('home');
+  topNav.innerHTML = renderTopNav('musings');
 
 
   const headings = randomMusingsData.filter(
@@ -503,18 +503,28 @@ function showRandomMusings() {
     </ul>
   `;
 }
+function showUpdateNotification() {
+  const notice = document.getElementById('update-notice');
+  if (!notice) return;
+
+  notice.style.display = 'block';
+  notice.onclick = () => {
+    // Refresh page and activate new service worker
+    window.location.reload(true);
+  };
+}
 
 function showAbout() {
-  title.textContent = "Know God Better - About this App";
+  title.textContent = "About this App";
   backButton.hidden = false;
   backButton.onclick = showHome;
   document.getElementById("icon-bar").style.display = "flex";
-  topNav.innerHTML = renderTopNav('home');
+  topNav.innerHTML = renderTopNav('about');
 
   app.innerHTML = `
     <div class="about-content">
       <p>
-        Scripture quotations taken from <em>The Holy Bible, New International Version (Anglicized), NIV®</em>.<br>
+        Scripture quotations taken from <em>The Holy Bible, New International Version (Anglicised), NIV®</em>.<br>
         Copyright © 1979, 1984, 2011 by Biblica, Inc.®<br>
         Used by permission under the General Use Guidelines. All rights reserved.
       </p>
@@ -609,7 +619,7 @@ function stripClickableDots(text) {
 }
 function showReflection() {
   app.className = "";
-  title.textContent = "Know God Better - Reflection";
+  title.textContent = "Reflection";
   backButton.hidden = false;
   backButton.onclick = showHome;
   document.getElementById("icon-bar").style.display = "flex";
@@ -652,7 +662,7 @@ function showIntroduction() {
   // Header state (explicit, every time)
   backButton.hidden = false;
   backButton.onclick = showHome;   // or showHome, your choice
-  title.textContent = "Know God Better - Introduction";
+  title.textContent = "Introduction";
 
   document.getElementById("icon-bar").style.display = "flex";
   topNav.innerHTML = renderTopNav('intro');
@@ -740,12 +750,48 @@ function openRandomMusing(index) {
       
     }
 
-
     return "";
   }).join("");
-
   openModal(headings[index].item.text, bodyHtml);
 }
 
+// ======= PWA Update UX =======
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js').then(reg => {
+    // When a new SW is found
+    reg.addEventListener('updatefound', () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          // New version is waiting
+          showUpdateNotice();
+        }
+      });
+    });
+  });
+}
+
+// Show update banner
+function showUpdateNotice() {
+  const notice = document.getElementById('update-notice');
+  if (!notice) return;
+
+  notice.classList.add('show');
+
+  notice.onclick = () => {
+    notice.textContent = "Refreshing…";
+    notice.style.cursor = "default";
+    // Activate new SW and reload
+    if (navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' });
+    }
+    window.location.reload(true);
+  };
+}
+
+// Tell SW to skip waiting when page requests it
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+  console.log("Service worker activated, page will reload");
+});
 
 
