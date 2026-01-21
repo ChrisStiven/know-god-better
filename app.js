@@ -9,6 +9,36 @@ let deferredPrompt = null;
 const topBar = document.getElementById('top-bar');
 const topNav = document.querySelector('#top-bar .top-nav');
 
+const ATTRIBUTE_GLOSSES = {
+beauty: "delightful excellence",
+creativity: "bringing something new into being",
+eternity: "existing without beginning or end",
+extravagance: "giving far more than necessary",
+faithfulness: "steadfast loyalty",
+forgiveness: "willingness to pardon wrongdoing",
+freedom: "unrestricted choice",
+grace: "kindness that is not deserved",
+goodness: "moral perfection",
+holiness: "purity that is set apart",
+joy: "deep overflowing gladness",
+justice: "fairness rightly applied",
+life: "the source of all being",
+love: "self‑giving commitment for others",
+mercy: "compassion instead of punishment",
+omnipotence: "unlimited power to act",
+omnipresence: "presence everywhere at all times",
+omniscience: "knowing everything perfectly",
+patience: "calm endurance without complaint",
+peace: "inner stillness and harmony",
+sovereignty: "complete control",
+transcendence: "existence beyond created limits",
+truth: "reality expressed without distortion",
+uniqueness: "one‑of‑a‑kind distinct identity",
+wisdom: "right knowledge applied well",
+
+};
+
+
 Promise.all([
   fetch('data.json').then(r => r.json()),
   fetch('scriptureText.json').then(r => r.json()),
@@ -448,7 +478,9 @@ function showAttribute(id) {
 
 
   app.innerHTML = `
-    <h2>${attr.name}</h2>
+    <h2 title="${ATTRIBUTE_GLOSSES[attr.id] || ''}">
+       ${attr.name}
+    </h2>
 
     <p><em>${attr.loveLabel}</em></p>
     <p>${attr.loveSummary}</p>
@@ -606,7 +638,7 @@ function openModal(titleText, bodyHtml) {
 }
 
 function stripClickableDots(text) {
-  return text.replace(/●(\w+)/g, '<span class="static-dot">●$1</span>');
+  return text.replace(/●(\w+)/g, '$1');
 }
 
   function openDefinitionModal(attr) {
