@@ -478,8 +478,10 @@ function showAttribute(id) {
 
 
   app.innerHTML = `
-    <h2 title="${ATTRIBUTE_GLOSSES[attr.id] || ''}">
-       ${attr.name}
+    <h2 class="attribute-name" 
+    title="${ATTRIBUTE_GLOSSES[attr.id]}" 
+    onclick="showAttributeGloss(event)">
+      ${attr.name}
     </h2>
 
     <p><em>${attr.loveLabel}</em></p>
@@ -510,6 +512,77 @@ function showAttribute(id) {
 ` : ""}
 
   `;
+}
+function showAttribute(id) {
+  app.className = "";
+  const attr = data.attributes.find(a => a.id === id);
+  title.textContent = `The Glory of God - ${attr.name}`;
+  backButton.hidden = false;
+  backButton.onclick = showHome;
+  document.getElementById("icon-bar").style.display = "flex";
+
+  topNav.innerHTML = renderTopNav('home');
+
+  // render the attribute page
+  app.innerHTML = `
+    <h2 class="attribute-name" data-gloss="${ATTRIBUTE_GLOSSES[attr.id] || ''}">${attr.name}</h2>
+
+    <p><em>${attr.loveLabel}</em></p>
+    <p>${attr.loveSummary}</p>
+
+    <h3>Definition</h3>
+    <p>${renderTextWithAttributeRefs(attr.definition)}</p>
+
+    ${attr.whatThatMeans ? `
+      <h3>What that means</h3>
+      <p>${renderTextWithAttributeRefs(attr.whatThatMeans)}</p>
+    ` : ""}
+
+    ${attr.whatItDoesNotMean && attr.whatItDoesNotMean.length ? `
+      <h3>What it does not mean</h3>
+      <ul>
+        ${attr.whatItDoesNotMean
+          .map(item => `<li>${renderTextWithAttributeRefs(item)}</li>`)
+          .join("")}
+      </ul>
+    ` : ""}
+
+    ${attr.scripture && attr.scripture.length ? `
+      <h3>Scripture</h3>
+      <p class="scripture-link" onclick="openScriptureModal(${JSON.stringify(attr.scripture).replace(/"/g, '&quot;')})">
+        📖 View Scripture
+      </p>
+    ` : ""}
+  `;
+
+  // add tooltip listeners for desktop hover and mobile tap
+  const headings = document.querySelectorAll('.attribute-name');
+  headings.forEach(h => {
+    h.addEventListener('mouseenter', showGlossTooltip); // desktop hover
+    h.addEventListener('mouseleave', hideGlossTooltip); // desktop leave
+    h.addEventListener('click', showGlossTooltip);      // tap on mobile
+  });
+}
+
+// tooltip functions
+function showGlossTooltip(event) {
+  const heading = event.currentTarget;
+  const gloss = heading.getAttribute('data-gloss');
+  if (!gloss) return;
+
+  const tooltip = document.getElementById('tooltip');
+  tooltip.textContent = gloss;
+  tooltip.style.display = 'block';
+
+  // position near heading
+  const rect = heading.getBoundingClientRect();
+  tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+  tooltip.style.left = `${rect.left + window.scrollX}px`;
+}
+
+function hideGlossTooltip() {
+  const tooltip = document.getElementById('tooltip');
+  tooltip.style.display = 'none';
 }
 
 function showRandomMusings() {
@@ -746,6 +819,17 @@ function openIntroSection(index) {
 
   openModal(headings[index].item.text, bodyHtml);
 }
+<div id="tooltip" style="
+  position: absolute;
+  display: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-family: 'Merriweather', serif;
+  z-index: 1000;
+"></div>
 
 function openRandomMusing(index) {
   const headings = randomMusingsData
