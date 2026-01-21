@@ -826,4 +826,3 @@ navigator.serviceWorker.addEventListener('controllerchange', () => {
   console.log("Service worker activated, page will reload");
 });
 
-
