@@ -1,3 +1,4 @@
+console.log("APP VERSION 9 LOADED");
 
 let data;
 let scriptureText = {};
@@ -509,11 +510,14 @@ function showAttribute(id) {
 
   // add tooltip listeners for desktop hover and mobile tap
   const headings = document.querySelectorAll('.attribute-name');
-  headings.forEach(h => {
-    h.addEventListener('mouseenter', showGlossTooltip); // desktop hover
-    h.addEventListener('mouseleave', hideGlossTooltip); // desktop leave
-    h.addEventListener('click', showGlossTooltip);      // tap on mobile
-  });
+
+headings.forEach(h => {
+  h.addEventListener('mouseenter', showGlossTooltip); // desktop
+  h.addEventListener('mouseleave', hideGlossTooltip);
+
+  h.addEventListener('touchstart', showGlossTooltip); // mobile
+  h.addEventListener('touchend', hideGlossTooltip);
+});
 }
 
 // tooltip functions
@@ -525,6 +529,7 @@ function showGlossTooltip(event) {
   const tooltip = document.getElementById('tooltip');
   tooltip.textContent = gloss;
   tooltip.style.display = 'block';
+  tooltip.classList.add('visible');
 
   // position near heading
   const rect = heading.getBoundingClientRect();
@@ -534,7 +539,10 @@ function showGlossTooltip(event) {
 
 function hideGlossTooltip() {
   const tooltip = document.getElementById('tooltip');
-  tooltip.style.display = 'none';
+  tooltip.classList.remove('visible');
+  setTimeout(() => {
+    tooltip.style.display = 'none';
+  }, 150);
 }
 
 function showRandomMusings() {
@@ -771,17 +779,7 @@ function openIntroSection(index) {
 
   openModal(headings[index].item.text, bodyHtml);
 }
-<div id="tooltip" style="
-  position: absolute;
-  display: none;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 6px 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  font-family: 'Merriweather', serif;
-  z-index: 1000;
-"></div>
+
 
 function openRandomMusing(index) {
   const headings = randomMusingsData

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Know God Better v7</title>
+  <title>Know God Better v9</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2b1f16">
@@ -44,48 +44,25 @@
 
   <script src="app.js"></script>
 
-  <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js');
-
-  });
-}
+ <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./service-worker.js').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newWorker = reg.installing;
-
       newWorker.addEventListener('statechange', () => {
-        if (newWorker.state === 'installed') {
-          if (navigator.serviceWorker.controller) {
-            // A new version is available
-            showUpdateNotification();
-          }
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          showUpdateNotification();
         }
       });
     });
   });
 }
-<div id="update-notice" style="
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #d41a17;
-  color: white;
-  padding: 0.75rem 1.2rem;
-  border-radius: 6px;
-  font-family: 'Merriweather', serif;
-  font-size: 0.95rem;
-  cursor: pointer;
-  display: none;
-  z-index: 2000;
-">
-  New version available — tap to refresh
-</div>
+</script>
+
 
 </script>
+
+<div id="tooltip"></div>
 
 </body>
 </html>
