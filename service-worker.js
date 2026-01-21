@@ -1,4 +1,4 @@
-const CACHE_NAME = "know-god-better-v7";
+const CACHE_NAME = "know-god-better-v8";
 
 const FILES_TO_CACHE = [
   "./",

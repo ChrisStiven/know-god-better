@@ -465,54 +465,6 @@ function showHome() {
   `;
 }
 
-
-function showAttribute(id) {
-  app.className = "";
-  const attr = data.attributes.find(a => a.id === id);
-  title.textContent = `The Glory of God - ${attr.name}`;
-  backButton.hidden = false;
-  backButton.onclick = showHome;
-  document.getElementById("icon-bar").style.display = "flex";
-  
-  topNav.innerHTML = renderTopNav('home');
-
-
-  app.innerHTML = `
-    <h2 class="attribute-name" 
-    title="${ATTRIBUTE_GLOSSES[attr.id]}" 
-    onclick="showAttributeGloss(event)">
-      ${attr.name}
-    </h2>
-
-    <p><em>${attr.loveLabel}</em></p>
-    <p>${attr.loveSummary}</p>
-
-    <h3>Definition</h3>
-    <p>${renderTextWithAttributeRefs(attr.definition)}</p>
-
-    ${attr.whatThatMeans ? `
-      <h3>What that means</h3>
-      <p>${renderTextWithAttributeRefs(attr.whatThatMeans)}</p>
-    ` : ""}
-
-    ${attr.whatItDoesNotMean && attr.whatItDoesNotMean.length ? `
-      <h3>What it does not mean</h3>
-      <ul>
-        ${attr.whatItDoesNotMean
-          .map(item => `<li>${renderTextWithAttributeRefs(item)}</li>`)
-          .join("")}
-      </ul>
-    ` : ""}
-
-    ${attr.scripture && attr.scripture.length ? `
-  <h3>Scripture</h3>
-  <p class="scripture-link" onclick="openScriptureModal(${JSON.stringify(attr.scripture).replace(/"/g, '&quot;')})">
-    📖 View Scripture
-  </p>
-` : ""}
-
-  `;
-}
 function showAttribute(id) {
   app.className = "";
   const attr = data.attributes.find(a => a.id === id);
