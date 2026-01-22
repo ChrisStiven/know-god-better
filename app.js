@@ -528,22 +528,19 @@ function showGlossTooltip(event) {
 
   const tooltip = document.getElementById('tooltip');
   tooltip.textContent = gloss;
-  tooltip.style.display = 'block';
-  tooltip.classList.add('visible');
 
-  // position near heading
   const rect = heading.getBoundingClientRect();
-  tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+  tooltip.style.top = `${rect.bottom + window.scrollY + 6}px`;
   tooltip.style.left = `${rect.left + window.scrollX}px`;
+
+  tooltip.classList.add('visible');
 }
 
 function hideGlossTooltip() {
   const tooltip = document.getElementById('tooltip');
   tooltip.classList.remove('visible');
-  setTimeout(() => {
-    tooltip.style.display = 'none';
-  }, 150);
 }
+
 
 function showRandomMusings() {
   app.className = "";
