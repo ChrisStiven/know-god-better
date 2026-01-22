@@ -1,16 +1,16 @@
-const CACHE_NAME = "know-god-better-v13";
+const CACHE_NAME = "know-god-better-v14";
 
 const FILES_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./data.json",
-  "./introduction.json",
-  "./randomMusings.json",
-  "./scriptureText.json",
-  "./icon-192.png",
-  "./icon-512.png"
+  "/know-god-better/",
+  "/know-god-better/index.html",
+  "/know-god-better/styles.css",
+  "/know-god-better/app.js",
+  "/know-god-better/data.json",
+  "/know-god-better/introduction.json",
+  "/know-god-better/randomMusings.json",
+  "/know-god-better/scriptureText.json",
+  "/know-god-better/icon-192.png",
+  "/know-god-better/icon-512.png"
 ];
 
 self.addEventListener("install", event => {

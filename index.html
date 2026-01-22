@@ -46,7 +46,7 @@
 
  <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js').then(reg => {
+  navigator.serviceWorker.register('/know-god-better/service-worker.js').then(reg => {
     reg.addEventListener('updatefound', () => {
       const newWorker = reg.installing;
       newWorker.addEventListener('statechange', () => {
