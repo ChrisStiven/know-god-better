@@ -472,6 +472,7 @@ button {
   opacity: 1;
   text-decoration: underline;
 }
+
 .about-author {
   margin-top: 2.5rem;
   font-size: 0.85rem;
@@ -566,4 +567,59 @@ body.dark #tooltip {
   background: #2b1f16;
   color: #ffffcc;
   border: 1px solid #555;
+}
+/* ------------------------------
+   Random Musings / inline links
+   ------------------------------ */
+
+/* Remove default browser styles and enforce colors */
+#app a {
+  color: inherit; /* fallback */
+  text-decoration: underline dotted;
+  transition: color 0.2s;
+}
+
+/* Light mode */
+body:not(.dark) #app a {
+  color: #d41a17;            /* main red */
+}
+
+body:not(.dark) #app a:visited {
+  color: #a32016;            /* visited red */
+}
+
+body:not(.dark) #app a:hover,
+body:not(.dark) #app a:focus,
+body:not(.dark) #app a:active {
+  color: #7a1a12;            /* hover/click red */
+}
+
+/* Dark mode */
+body.dark #app a {
+  color: #ff7f70;            /* light red for dark bg */
+}
+
+body.dark #app a:visited {
+  color: #ff604f;            /* visited red */
+}
+
+body.dark #app a:hover,
+body.dark #app a:focus,
+body.dark #app a:active {
+  color: #ff3b2e;            /* hover/click red */
+}
+
+/* Optional: prevent underline from being too strong on hover */
+#app a:hover {
+  text-decoration: underline dotted;
+}
+
+/* FORCE link colour inside modals */
+.modal a,
+.modal a:link,
+.modal a:visited,
+.modal a:hover,
+.modal a:active {
+  color: #d41a17 !important;
+  text-decoration: underline;
 }

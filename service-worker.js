@@ -1,4 +1,4 @@
-const CACHE_NAME = "know-god-better-v10";
+const CACHE_NAME = "know-god-better-v11";
 
 const FILES_TO_CACHE = [
   "./",
@@ -30,6 +30,7 @@ self.addEventListener("activate", event => {
     ).then(() => self.clients.claim())
   );
 });
+
 
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;

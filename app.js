@@ -1,11 +1,28 @@
-console.log("APP VERSION 9 LOADED");
-
 let data;
 let scriptureText = {};
 let introductionData;
 let randomMusingsData;
 let attributeIndex = {}; 
-let deferredPrompt = null;
+let deferredPrompt;
+const installBtn = document.getElementById("install-btn");
+
+window.addEventListener("beforeinstallprompt", event => {
+  event.preventDefault();
+  deferredPrompt = event;
+  if (installBtn) installBtn.hidden = false;
+});
+
+if (installBtn) {
+  installBtn.onclick = async () => {
+    if (!deferredPrompt) return;
+
+    deferredPrompt.prompt();
+    const result = await deferredPrompt.userChoice;
+
+    deferredPrompt = null;
+    installBtn.hidden = true;
+  };
+}
 
 const topBar = document.getElementById('top-bar');
 const topNav = document.querySelector('#top-bar .top-nav');
@@ -36,9 +53,16 @@ transcendence: "existence beyond created limits",
 truth: "reality expressed without distortion",
 uniqueness: "one‑of‑a‑kind distinct identity",
 wisdom: "right knowledge applied well",
-
 };
 
+// ======= Make urls clickable =======
+function linkify(text) {
+  const urlRegex = /(https?:\/\/[^\s)]+)/g;
+
+  return text.replace(urlRegex, url =>
+    `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
+  );
+}
 
 Promise.all([
   fetch('data.json').then(r => r.json()),
@@ -54,12 +78,6 @@ Promise.all([
   buildAttributeIndex();
   showLaunch();
 });
-
-const installBtn = document.getElementById("install-btn");
-
-function showInstallButton() {
-  if (installBtn) installBtn.hidden = false;
-}
 
 if (installBtn) {
   installBtn.onclick = async () => {
@@ -565,14 +583,12 @@ function showRandomMusings() {
     </ul>
   `;
 }
-function showUpdateNotification() {
-  const notice = document.getElementById('update-notice');
-  if (!notice) return;
+  function showUpdateNotification() {
+  const banner = document.getElementById('update-notice');
+  banner.style.display = 'block';
 
-  notice.style.display = 'block';
-  notice.onclick = () => {
-    // Refresh page and activate new service worker
-    window.location.reload(true);
+  banner.onclick = () => {
+    window.location.reload();
   };
 }
 
@@ -798,9 +814,11 @@ function openRandomMusing(index) {
   return;
 }
   const bodyHtml = sectionItems.map(item => {
-    if (item.type === "paragraph") {
-      return `<p>${renderTextWithAttributeRefs(item.text)}</p>`;
-    }
+   if (item.type === "paragraph") {
+  return `<p>${linkify(renderTextWithAttributeRefs(item.text))}</p>`
+  ;
+  
+}
 
     if (item.type === "list") {
       return `
@@ -817,6 +835,8 @@ function openRandomMusing(index) {
   }).join("");
   openModal(headings[index].item.text, bodyHtml);
 }
+
+
 
 // ======= PWA Update UX =======
 if ('serviceWorker' in navigator) {
