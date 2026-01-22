@@ -1,24 +1,24 @@
 {
-  "id": "./",
   "name": "Know God Better",
   "short_name": "Know God",
   "description": "A quiet, reflective app for contemplating the Glory of God in His interpenetrating attributes.",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/know-god-better/",
+  "scope": "/know-god-better/",
   "display": "standalone",
   "background_color": "#ffffcc",
   "theme_color": "#2b1f16",
- 
   "icons": [
     {
       "src": "icon-192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
-  {
-    "src": "icon-512.png",
-    "sizes": "512x512",
-    "type": "image/png"
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

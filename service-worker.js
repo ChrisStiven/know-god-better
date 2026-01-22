@@ -1,4 +1,4 @@
-const CACHE_NAME = "know-god-better-v11";
+const CACHE_NAME = "know-god-better-v13";
 
 const FILES_TO_CACHE = [
   "./",
@@ -35,19 +35,28 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
 
+  const request = event.request;
+
+  // Always try network first for HTML
+  if (request.headers.get("accept")?.includes("text/html")) {
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+          return response;
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
+
+  // Cache-first for everything else
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+    caches.match(request).then(response => response || fetch(request))
   );
 });
 
-// Listen for skipWaiting message
-self.addEventListener('message', event => {
-  if (event.data && event.data.action === 'skipWaiting') {
-    self.skipWaiting();
-  }
-});
 
 
 
