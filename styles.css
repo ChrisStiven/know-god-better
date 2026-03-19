@@ -623,3 +623,65 @@ body.dark #app a:active {
   color: #d41a17 !important;
   text-decoration: underline;
 }
+/* =========================
+   Reflection buttons (match launch style)
+   ========================= */
+
+.reflection-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.reflection-btn {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.6rem 1rem;
+
+  font-family: "Merriweather", serif;
+  font-size: 1.05rem;
+
+  background: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  cursor: pointer;
+  opacity: 0.85;
+  transition: background 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Hover matches launch-bar */
+.reflection-btn:hover {
+  background: var(--panel-hover);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+/* =========================
+   Modal fade-in
+   ========================= */
+
+.modal-overlay {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+}
+
+.modal {
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal.show {
+  transform: translateY(0);
+  opacity: 1;
+}

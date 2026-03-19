@@ -63,7 +63,61 @@ function linkify(text) {
     `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
   );
 }
+const classicSongs = [
+  { title: "Holy, Holy, Holy", url: "https://youtu.be/JwuDSw-9cUQ" },
+  { title: "Be Thou My Vision", url: "https://youtu.be/AN2xrjfNdaU" },
+  { title: "How Great Thou Art", url: "https://youtu.be/Cc0QVWzCv9k" },
+  { title: "Great Is Thy Faithfulness", url: "https://youtu.be/ErwiBz1QA4o" },
+  { title: "O Worship the King", url: "https://youtu.be/MWe1j0G_-aM" },
+  { title: "Praise to the Lord, the Almighty", url: "https://youtu.be/BNq0WtMSmIY" },
+  { title: "Crown Him with Many Crowns", url: "https://youtu.be/bFEY_GrunQc" },
+  { title: "All Hail the Power of Jesus Name", url: "https://youtu.be/_hmtxrFgrEA" },
+  { title: "Immortal, Invisible, God Only Wise", url: "https://youtu.be/4oGuGzCFEWI" },
+  { title: "O for a Thousand Tongues to Sing", url: "https://youtu.be/4O9kw3cILpg" },
+  { title: "Love Divine, All Loves Excelling", url: "https://youtu.be/JGGcqhKShQ8" },
+  { title: "And Can It Be", url: "https://youtu.be/sQeIGbKqiw8" },
+  { title: "Rock of Ages", url: "https://youtu.be/CLuuhNkPF-4" },
+  { title: "The King of Love My Shepherd Is", url: "https://youtu.be/WLdPoQnylnA" },
+  { title: "This Is My Father’s World", url: "https://youtu.be/EMAsxu_HwaA" },
+  { title: "All Creatures of Our God and King", url: "https://youtu.be/ReuzmyzKsUw" },
+  { title: "Joyful Joyful We Adore Thee", url: "https://youtu.be/cHaiPTpK4RI" },
+  { title: "Fairest Lord Jesus", url: "https://youtu.be/DY7HjUxGS6U" },
+  { title: "To God Be the Glory", url: "https://youtu.be/-15v9iworAU" },
+  { title: "Blessed Assurance", url: "https://youtu.be/MUb-bSva-o4" },
+  { title: "I Stand Amazed in the Presence", url: "https://youtu.be/Ou1AfpGUlu8" },
+  { title: "Jesus Paid It All", url: "https://youtu.be/YPYn7CErBpM" },
+  { title: "Rejoice the Lord Is King", url: "https://youtu.be/AhEUCSzaU8M" },
+  { title: "Guide Me O Thou Great Redeemer", url: "https://youtu.be/5j48TLIRb4Q" },
+  { title: "Be Still My Soul", url: "https://youtu.be/QYbX9wmQTlI" }
+];
 
+const contemporarySongs = [
+  { title: "Living Hope", url: "https://youtu.be/ifFovH-dhHw" },
+  { title: "Holy Forever", url: "https://youtu.be/IkHgxKemCRk" },
+  { title: "Great Are You Lord", url: "https://youtu.be/3jCnAAeEJSQ" },
+  { title: "This I Believe (The Creed)", url: "https://youtu.be/nNiYUPsHgls" },
+  { title: "10,000 Reasons", url: "https://youtu.be/DXDGE_lRI0E" },
+  { title: "How Great Is Our God", url: "https://youtu.be/KBD18rsVJHk" },
+  { title: "What a Beautiful Name", url: "https://youtu.be/r5L6QlAH3L4" },
+  { title: "Oceans", url: "https://youtu.be/dy9nwe9_xzw" },
+  { title: "The Blessing", url: "https://youtu.be/jiko8DSRMZI" },
+  { title: "Way Maker", url: "https://youtu.be/q8IlqzROqTY" },
+  { title: "Gratitude", url: "https://youtu.be/dQdfs5S6jyA" },
+  { title: "Battle Belongs", url: "https://youtu.be/johgSkNj3-A" },
+  { title: "This Is Our God", url: "https://youtu.be/lC_eI8B1qGI" },
+  { title: "Faithful One", url: "https://youtu.be/8lhLiLXS5qQ" },
+  { title: "Trust in God", url: "https://youtu.be/iJE4yahElBQ" },
+  { title: "Refiner's Fire", url: "https://youtu.be/rII4UzVTuQo" },
+  { title: "See a Victory", url: "https://youtu.be/jEK6_rz26z0" },
+  { title: "Sovereign Over Us", url: "https://youtu.be/Lay-r2g52SQ" },
+  { title: "Goodness of God", url: "https://youtu.be/IvSuGyJQ6oM" },
+  { title: "Lion and the Lamb", url: "https://youtu.be/q1SXPODm0uE" },
+  { title: "No Longer Slaves", url: "https://youtu.be/f8TkUMJtK5k" },
+  { title: "Forever", url: "https://youtu.be/HKzS4SjBeb8" },
+  { title: "Jesus Messiah", url: "https://youtu.be/tdxSC1tHJn0" },
+  { title: "The Lord Almighty Reigns (Psalm 93)", url: "https://youtu.be/YfG0Efz49VU" },
+  { title: "Revelation Song", url: "https://youtu.be/7we9YBUAvb4" }
+];
 Promise.all([
   fetch('data.json').then(r => r.json()),
   fetch('scriptureText.json').then(r => r.json()),
@@ -650,38 +704,54 @@ function openScriptureModal(refs) {
 );
 }
 
-function openModal(titleText, bodyHtml) {
-  const overlay = document.createElement('div');
-  overlay.className = 'modal-overlay';
+function openModal(title, content) {
+  const overlay = document.createElement("div");
+  overlay.className = "modal-overlay";
 
-  overlay.innerHTML = `
-    <div class="modal" role="dialog" aria-modal="true">
-      <button class="modal-close" aria-label="Close">✕</button>
-      <h3>${titleText}</h3>
-      ${bodyHtml}
-    </div>
+  const modal = document.createElement("div");
+  modal.className = "modal";
+
+  modal.innerHTML = `
+    <button class="modal-close">&times;</button>
+    <h3>${title}</h3>
+    ${content}
   `;
 
+  overlay.appendChild(modal);
   document.body.appendChild(overlay);
-
-  function close() {
-    document.removeEventListener('keydown', escListener);
-    overlay.remove();
+  
+// 👇 NEW: click outside to close
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    close();
   }
+});
+  // ✨ fade IN
+  setTimeout(() => {
+    overlay.classList.add("show");
+    modal.classList.add("show");
+  }, 10);
 
-  overlay.addEventListener('click', e => {
-    if (e.target === overlay) close();
-  });
+  // ✨ close with fade OUT
+  function close() {
+    overlay.classList.remove("show");
+    modal.classList.remove("show");
+
+    setTimeout(() => {
+      overlay.remove();
+    }, 200);
+  }
 
   overlay.querySelector('.modal-close')
     .addEventListener('click', close);
+}
 
   function escListener(e) {
     if (e.key === 'Escape') close();
   }
 
   document.addEventListener('keydown', escListener);
-}
+
 
 function stripClickableDots(text) {
   return text.replace(/●(\w+)/g, '$1');
@@ -719,9 +789,24 @@ function showReflection() {
   `;
 
   // Add the "Let your thinking lead..." paragraph
-  const footerHtml = `<p style="text-align:center; margin-top:1rem;">
+  const footerHtml = `
+  <p style="text-align:center; margin-top:1rem;">
     Let reflection give way to thanks and worship.
-  </p>`;
+  </p>
+
+  <p style="text-align:center; margin-top:1rem;">
+    When you're ready, choose a hymn or song as a response of worship.
+  </p>
+
+  <div class="reflection-actions">
+  <button class="reflection-btn" onclick="playRandomSong(classicSongs)">
+    🎼 Listen to a classic hymn
+  </button>
+  <button class="reflection-btn" onclick="playRandomSong(contemporarySongs)">
+    🎧 Listen to a contemporary worship song
+  </button>
+</div>
+`;
 
   // Optional: add an introductory sentence about creative thinking
   const introHtml = `<p style="text-align:center; margin-bottom:1rem;">
@@ -877,3 +962,45 @@ navigator.serviceWorker.addEventListener('controllerchange', () => {
   console.log("Service worker activated, page will reload");
 });
 
+function getYouTubeId(url) {
+  const regExp = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/;
+  const match = url.match(regExp);
+  return match ? match[1] : null;
+}
+
+function playSong(song) {
+  const videoId = getYouTubeId(song.url);
+
+  if (!videoId) {
+    window.open(song.url, "_blank");
+    return;
+  }
+
+  openModal(
+    song.title,
+    `
+    <p style="margin-bottom:1rem;">
+      As you listen, consider which of God's attributes are reflected here.
+    </p>
+
+    <div style="position:relative;padding-bottom:56.25%;height:0;">
+      <iframe 
+        src="https://www.youtube.com/embed/${videoId}"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p style="margin-top:1rem;">
+      <a href="${song.url}" target="_blank">Open in YouTube</a>
+    </p>
+    `
+  );
+}
+
+function playRandomSong(list) {
+  const song = list[Math.floor(Math.random() * list.length)];
+  playSong(song);
+}
